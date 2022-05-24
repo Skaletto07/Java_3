@@ -64,7 +64,7 @@ public class ForTestClass
                     if (methodParameter != null) {
                         String name = methodParameter.getType().getName();
                         if ("java.lang.String".equals(name)) {
-                            if (modifiers == Modifier.PRIVATE) {
+                            if (Modifier.isPrivate(modifiers)) {
                                 method.setAccessible(true);
                                 try {
                                     method.invoke(instance, "Private something");
