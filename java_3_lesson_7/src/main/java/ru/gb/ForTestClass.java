@@ -84,7 +84,7 @@ public class ForTestClass
                     }
                 }
             } else {
-                if (modifiers == Modifier.PRIVATE) {
+                if (Modifier.isPrivate(modifiers)) {
                     method.setAccessible(true);
                     try {
                         method.invoke(instance);
